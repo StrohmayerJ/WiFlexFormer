@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ```
 
 ### Dataset
-Get the `3DO dataset` from https://zenodo.org/uploads/10925351 and put it in the `/data` directory.
+Get the `3DO dataset` from https://zenodo.org/records/10925351 and put it in the `/data` directory.
 
 ### Training & Testing 
 
