@@ -155,7 +155,7 @@ if __name__ == "__main__":
     parser.add_argument('--ws', type=int, default=351, help='spectrogram window size (number of wifi packets)')
     parser.add_argument('--workers', type=int, default=8, help='maximum number of dataloader workers')
     parser.add_argument('--device', default='0', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
-    parser.add_argument('--nowandb', action='store_true', help='disable wandb logging')
+    parser.add_argument('--log', action='store_true', help='enable wandb logging')
     opt = parser.parse_args()
 
     # Run the experiment opt.num times. For each run, create a new directory in the "runs" folder with the suffix _runIdx (i.e. *_1, *_2, *_3, ...).
@@ -165,12 +165,13 @@ if __name__ == "__main__":
 
         # wandb initialization
         os.environ["WANDB_SILENT"] = "true"
-        if opt.nowandb:
-            wandb.init(mode="disabled")
-        else:
+        # enable/disable wandb
+        if opt.log:
             wandb.init(project="WiFlexFormer", entity="XXXX", config=opt)
             wandb.run.name = opt.name
-        
+        else:
+            wandb.init(mode="disabled")
+            
         # create run directory
         runDir = os.path.join("runs", opt.name)
         os.makedirs(os.path.join("runs", opt.name), exist_ok=True)
