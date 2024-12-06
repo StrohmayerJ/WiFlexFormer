@@ -4,7 +4,7 @@
 **Strohmayer, J., Wödlinger, M., and Kampel, M.** (2024). WiFlexFormer: Efficient WiFi-Based Person-Centric Sensing. arXiv. doi: https://doi.org/10.48550/arXiv.2411.04224.
 
 BibTeX:
-```
+```BibTeX
 @misc{strohmayer2024wiflexformer,
       title={WiFlexFormer: Efficient WiFi-Based Person-Centric Sensing}, 
       author={Julian Strohmayer and Matthias Wödlinger and Martin Kampel},
