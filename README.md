@@ -35,7 +35,7 @@ Get the `3DO dataset` from https://zenodo.org/records/10925351 and put it in the
 **Training** | Example command for training three *WiFlexFormer* models (`wff_1`, `wff_2`, and `wff_3`) on day 1 data of the `3DO dataset` for 10 epochs using a window size of 351 WiFi packets and a batch size of 32:
 
 ```
-python3 train.py --data data/3DO --name wff --num 3 --epochs 10 --ws 351 --bs 32 --device 0
+python3 train.py --data data/3DO --name wff --num 3 --epochs 10 --ws 351 --bs 32 --device 0 --nowandb
 ```
 
 Model checkpoints for the lowest validation loss and highest validation F1-Score are stored in the corresponding run directories `runs/wff_*`.
